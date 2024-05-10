@@ -6,16 +6,17 @@ import PIdentity from "../Components/Pidentity";
 import AgencyChoice from "../Components/AgencyChoice";
 import DocumentsSignature from "../Components/DocumentsSignature";
 import CreatePassword from "../Components/CreatePassword";
+import ValidationSecond from "../Components/Validation-sec";
 const STEPS = {
-  0: { component: <ComplementaryInfo />, title: "Information Complementaire" },
-  1: { component: <FinantialInformation />, title: "Information financiére" },
-  2: { component: <OtherInformation />, title: "Autre Informations" },
-  3: { component: <PIdentity />, title: "Piéce identiter" },
-  4: { component: <AgencyChoice />, title: "Chois D'agence" },
-  5: { component: <DocumentsSignature />, title: "Signature des documents" },
-  6: { component: <CreatePassword />, title: "Je créé mon mot de passe" },
+  0: { component: <ValidationSecond />, title: "Validation" },
+  1: { component: <ComplementaryInfo />, title: "Information Complementaire" },
+  2: { component: <FinantialInformation />, title: "Information financiére" },
+  3: { component: <OtherInformation />, title: "Autre Informations" },
+  4: { component: <PIdentity />, title: "Piéce identiter" },
+  5: { component: <AgencyChoice />, title: "Chois D'agence" },
+  6: { component: <DocumentsSignature />, title: "Signature des documents" },
+  7: { component: <CreatePassword />, title: "Je créé mon mot de passe" },
 };
-console.log(Object.keys(STEPS));
 function RegisterCompletion() {
   const [steps, setsteps] = useState(0);
   const Component = STEPS[steps].component;
@@ -78,7 +79,7 @@ function RegisterCompletion() {
         <div
           style={{
             padding: "3rem",
-            backgroundColor: "white",
+            backgroundColor: "#ebe8e1",
             borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
